@@ -32,7 +32,7 @@ function Main() {
     setLocalStorageData(cartedMeal.idMeal);
     // console.log(cartedMeal);
   };
-  console.log(cart);
+  //   console.log(cart);
 
   //get cart data from local storage
   useEffect(() => {
@@ -45,7 +45,7 @@ function Main() {
       }
     }
     setCart(newCart);
-    console.log(storedData);
+    // console.log(storedData);
   }, [meals]);
 
   return (

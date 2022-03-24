@@ -3,7 +3,7 @@ import "./Cart.css";
 
 function Cart(props) {
   const { cart } = props;
-  //   console.log("cartData", cart);
+  console.log("cartData", cart);
   return (
     <div className="cart-container">
       <div className="cart">
