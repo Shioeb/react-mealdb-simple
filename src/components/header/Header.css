@@ -1,0 +1,23 @@
+.navbar {
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: darksalmon;
+}
+.navbar .brand {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+.navbar .links a {
+  text-decoration: none;
+  margin-left: 20px;
+  color: #fff;
+  font-size: 17px;
+  transition: all 0.2s;
+}
+.navbar .links a:hover {
+  color: #000;
+}
