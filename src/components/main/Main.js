@@ -22,9 +22,12 @@ function Main() {
     const isExist = cart.find(
       (mealName) => mealName.strMeal === cartedMeal.strMeal
     );
+    // console.log(isExist);
     if (!isExist) {
+      cartedMeal.quantity = 1;
       newCart = [...cart, cartedMeal];
     } else {
+      cartedMeal.quantity = +cartedMeal.quantity + 1;
       newCart = [...cart];
     }
     setCart(newCart);
@@ -41,6 +44,10 @@ function Main() {
     for (const data in storedData) {
       const saved = meals.find((meal) => meal.idMeal === data);
       if (saved) {
+        // console.log("saved", saved);
+        // console.log("saved", saved.quantity);
+        // console.log("storedstoredData", storedData[saved.idMeal]);
+        saved.quantity = storedData[saved.idMeal];
         newCart.push(saved);
       }
     }

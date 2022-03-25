@@ -3,14 +3,18 @@ import "./Cart.css";
 
 function Cart(props) {
   const { cart } = props;
-  console.log("cartData", cart);
+  //   console.log("cartData", cart);
   return (
     <div className="cart-container">
       <div className="cart">
         <h1>Cart</h1>
         {/* {cart.map((c) => c + ", ")} */}
         {cart.map((mealName, key) => {
-          return <li key={key}>{mealName.strMeal}</li>;
+          return (
+            <li key={key}>
+              {mealName.strMeal} - {mealName.quantity}
+            </li>
+          );
         })}
       </div>
     </div>
